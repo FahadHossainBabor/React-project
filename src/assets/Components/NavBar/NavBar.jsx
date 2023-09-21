@@ -13,15 +13,15 @@ const NavBar = () => {
 
       
     return (
-        <nav className='bg-yellow-500 p-6'>
+        <nav className='bg-yellow-400 p-6'>
            <div onClick={()=>setOpen(!open)}>
             {
                 open? <RxCross2 className='text-2xl md:hidden'></RxCross2>:<AiOutlineMenu className='text-2xl md:hidden'></AiOutlineMenu>
             }
            
            </div>
-           <ul className={`md:flex absolute duration-1000 md:static bg-yellow-400 p-2 
-            ${open?"top-16" :"-top-60"}
+           <ul className={`md:flex absolute duration-1000 md:static bg-yellow-400 p-4
+            ${open?"top-16 left-20" :"-top-60 left-20"}
            `}>
            {
             routes.map(route => <li className="mr-6 px-6 hover:bg-purple-500 rounded-md" key={route.id}><a href={route.path}>{route.name}</a></li>)
